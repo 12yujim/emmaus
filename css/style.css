@@ -1,0 +1,19 @@
+.carousel-container {
+	padding-top: 50px;
+	width: 100%;
+	margin: auto;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 100%;
+  margin: auto;
+}
+
+.dropdown:hover .dropdown-menu {
+	display: block;
+}
+
+#content {
+	height: 10000px;
+}
