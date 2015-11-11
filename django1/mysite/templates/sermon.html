@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <h1>Sermons</h1>
+    {% if sermons %}
+    	{% for sermon in sermons %}
+    	<h3>{{ sermon.name }}</h3><br>
+    	<audio controls>
+    		<source src="{{ sermon.audio.url }}" type="audio/mpeg">
+    		Your browser does not support the audio element.
+    	</audio><br>
+    	{% endfor %}
+    {% else %}
+    	<p>No sermons yet.</p>
+    {% endif %}
+    
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <h1>Ministries</h1>
+
+    <h2>Core</h2>
+	<p>The CORE help different ministries collaborate, handle communication with KCC and other fellowships, and whatever else is needed to keep Emmaus Road running smoothly!</p>
+	{% if cores %}
+		<div class="row">
+		{% for core in cores %}
+	        <div class="col-md-4">
+	        	<div id="profile">
+	        	{% if core.picture %}
+	            	<img src="{{ core.picture.url }}" height="150px" width="150px"/><br>
+	            	<p><b>{{ core.name }}</b></p>
+	            {% else %}
+	            	<img src="media/profiles/placeholder.jpg" height="150px" width="150px"/><br>
+	            	<p><b>{{ core.name }}</b></p>
+	            {% endif %}
+	            </div>
+	        </div>
+	    {% endfor %}
+	    </div>
+    {% else %}
+    	<p>No core :(</p>
+    {% endif %}
+
+
+    <h2>Servant Team</h2>
+	<p>Inreach ministry coordinates Sunday service functions, organizes events and birthdays, and looks after members of Emmaus Road.</p>
+	{% if servants %}
+		<div class="row">
+		{% for servant in servants %}
+	        <div class="col-md-4">
+	        	<div id="profile">
+	            {% if servant.picture %}
+	            	<img src="{{ servant.picture.url }}" height="150px" width="150px"/><br>
+	            	<p><b>{{ servant.name }}</b></p>
+	            {% else %}
+	            	<img src="/media/profiles/placeholder.jpg" height="150px" width="150px"/><br>
+	            	<p><b>{{ servant.name }}</b></p>
+	            {% endif %}
+	            </div>
+	        </div>
+	    {% endfor %}
+	    </div>
+    {% else %}
+    	<p>No servants :(</p>
+    {% endif %}
+
+    <h2>Praise Team</h2>
+	<p>Praise ministry leads worship on Sunday.</p>
+	{% if praises %}
+		<div class="row">
+		{% for praise in praises %}
+	        <div class="col-md-4">
+	        	<div id="profile">
+	            {% if praise.picture %}
+	            	<img src="{{ praise.picture.url }}" height="150px" width="150px"/><br>
+	            	<p><b>{{ praise.name }}</b></p>
+	            {% else %}
+	            	<img src="/media/profiles/placeholder.jpg" height="150px" width="150px"/><br>
+	            	<p><b>{{ praise.name }}</b></p>
+	            {% endif %}
+	            </div>
+	        </div>
+	    {% endfor %}
+	    </div>
+    {% else %}
+    	<p>No praises :(</p>
+    {% endif %}
+    
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	{% if posts %}
+		<div id="allposts">
+		{% for post in posts %}
+			<div id="entry">
+				<a href="{{ post.get_absolute_url }}">{{ post.title }}</a><br>
+				{% if post.summary %}
+					{{ post.summary }}
+				{% endif %}
+			</div>
+		{% endfor %}
+		</div>
+	{% else %}
+		<p>There are no events going on right now.</p>
+		<p>Check back later!</p>
+	{% endif %}
+{% endblock %}

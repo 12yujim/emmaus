@@ -1,0 +1,60 @@
+
+#container {
+	width: 60%;
+	margin: 0 auto;
+}
+
+#banner img {
+	height: 30%;
+	width: 100%;
+}
+
+#content {
+	width: 100%;
+}
+
+#footer {
+	margin-bottom: 20px;
+}
+
+#map {
+	width: 400px;
+	height: 300px;
+}
+
+#allposts {
+	width: 80%;
+	margin: 0 auto;
+}
+
+#entry {
+	margin-bottom: 50px;
+}
+
+#myCarousel {
+	margin-bottom: 20px;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 15px;
+}
+
+#profile > img,
+#profile > p {
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+}
+
+.col-md-4 {
+	margin-bottom: 20px;
+}

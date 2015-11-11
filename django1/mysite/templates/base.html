@@ -1,0 +1,92 @@
+{% load staticfiles %}
+
+<html>
+    <head>
+    	<link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.css' %}"/>
+    	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+        <title>{% block head_title %}Emmaus Road | Korean Church at Cornell English Ministry{% endblock %}</title>
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script>
+	      function initialize() {
+	        var mapCanvas = document.getElementById('map');
+	        var myLatLng = {lat: 42.444950, lng: -76.485814};
+	        var mapOptions = {
+	          center: myLatLng,
+	          zoom: 16,
+	          mapTypeId: google.maps.MapTypeId.ROADMAP
+	        }
+	        var map = new google.maps.Map(mapCanvas, mapOptions)
+	        var marker = new google.maps.Marker({
+			  position: myLatLng,
+			  map: map
+			});
+	      }
+	      google.maps.event.addDomListener(window, 'load', initialize);
+	    </script>
+    </head>
+    <body>
+    	<div id="container">
+    		<div id="banner">
+    			<img src="{% static 'assets/placeholder.jpg' %}">
+    		</div>
+    		
+    		<div id="navbar-container">
+				<nav class="navbar navbar-default">
+				  <div class="container-fluid">
+				    <!-- Brand and toggle get grouped for better mobile display -->
+				    <div class="navbar-header">
+				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+				      <a class="navbar-brand" href="/">Emmaus Road</a>
+				    </div>
+
+				    <!-- Collect the nav links, forms, and other content for toggling -->
+				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				      <ul class="nav navbar-nav">
+				        <li><a href="/">Home</a></li>
+				        <li><a href="/about">About</a></li>
+				        <li class="dropdown">
+				          <a href="/ministries" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ministries<span class="caret"></span></a>
+				          <ul class="dropdown-menu">
+				            <li><a href="/ministries/#">Core</a></li>
+				            <li><a href="/ministries/#">Servant Team</a></li>
+				            <li><a href="/ministries/#">Praise Team</a></li>
+				          </ul>
+				        </li>
+				        <li class="dropdown">
+				          <a href="/beliefs" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Beliefs<span class="caret"></span></a>
+				          <ul class="dropdown-menu">
+				            <li><a href="/beliefs/#">Vision</a></li>
+				            <li><a href="/beliefs/#">Core Values</a></li>
+				            <li><a href="/beliefs/#">Doctrine</a></li>
+				          </ul>
+				        </li>
+				        <li><a href="/events">Events</a></li>
+				        <li><a href="/sermon">Sermons</a></li>
+				        <li><a href="/contact">Contact</a></li>
+				      </ul>
+				    </div><!-- /.navbar-collapse -->
+				  </div><!-- /.container-fluid -->
+				</nav>
+    		</div>
+
+    		<div id="content">
+    			{% block content %}
+
+    			{% endblock %}
+    		</div>
+
+    		<hr>
+
+    		<div id="footer">
+    			&copy; Emmaus Road 2015
+    		</div>
+	    </div>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	    <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+    </body>
+</html>
