@@ -41,14 +41,12 @@
         <div class="col-md-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac sodales nisi. Praesent sit amet sem non elit dapibus malesuada. Vestibulum magna tellus, tempor sit amet justo at, congue mattis arcu. Mauris auctor augue luctus enim varius imperdiet. Etiam id rhoncus ipsum, quis luctus nulla. Donec pellentesque velit justo. Cras ac purus lobortis, vehicula lorem id, suscipit eros. Aliquam erat volutpat. Maecenas vitae nisi ut ante sodales euismod. Phasellus ultricies turpis nec ligula dictum, vel vestibulum arcu malesuada. Proin lacinia rutrum ante. Vestibulum purus diam, iaculis non porttitor non, cursus sit amet neque. Mauris sit amet erat sit amet lectus tristique ornare tincidunt id est. Integer finibus velit tellus, sed blandit lacus vehicula vitae.
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" style="text-align: center; vertical-align: middle;">
             <h3 style="margin-top: 0">Current Events</h3>
             {% if posts %}
-                <ul>
                 {% for post in posts %}
-                    <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+                    <a href="{{ post.get_absolute_url }}" style="display: inline-block; margin-bottom: 10px">{{ post.title }}</a><br>
                 {% endfor %}
-                </ul>
                 <a href="/events">See the rest of our events here!</a>
             {% else %}
                 <p>Nothing going on right now!</p>
