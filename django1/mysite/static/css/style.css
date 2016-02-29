@@ -10,6 +10,7 @@
 }
 
 #content {
+	padding-top: 70px;
 	width: 100%;
 }
 
@@ -18,13 +19,14 @@
 }
 
 #map {
-	width: 400px;
+	width: 500px;
 	height: 300px;
 }
 
 #allposts {
 	width: 80%;
 	margin: 0 auto;
+	margin-top: 100px;
 }
 
 #entry {
@@ -37,8 +39,10 @@
 
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-    width: 70%;
+    width: 100%;
     margin: auto;
+    max-height: 300px;
+    object-fit: cover;
 }
 
 .aligncenter {
@@ -57,4 +61,28 @@
 
 .col-md-4 {
 	margin-bottom: 20px;
+}
+
+.bannerContainer {
+    position:relative;     
+}
+
+.carousel {
+    position:absolute;
+    top:0;    
+    margin-bottom: 10%;
+}
+
+.navbar {
+    position:absolute;
+    top:30px;
+    z-index:10;
+    width:59%;
+}
+
+
+hr
+{
+width: 96%;
+height: 1px;
 }
