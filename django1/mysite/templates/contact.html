@@ -15,8 +15,8 @@
 
     <form action="" method="post">
         {% csrf_token %}
-        <p>Subject: <input type="text" name="subject"></p>
-        <p>Your e-mail (optional): <input type="text" name="email"></p>
+        <p>Subject:<br><input type="text" name="subject"></p>
+        <p>Your e-mail (optional):<br><input type="text" name="email"></p>
         <p>Message: <br><textarea name="message" rows="6" cols="50"></textarea></p>
         <input type="submit" value="Submit">
     </form>

@@ -1,3 +1,6 @@
+h1 {
+	margin-bottom: 20px;
+}
 
 #container {
 	width: 60%;
@@ -24,7 +27,7 @@
 }
 
 #allposts {
-	width: 80%;
+	width: 90%;
 	margin: 0 auto;
 	margin-top: 100px;
 }
@@ -34,7 +37,7 @@
 }
 
 #myCarousel {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 .carousel-inner > .item > img,
@@ -63,6 +66,7 @@
 	margin-bottom: 20px;
 }
 
+
 .bannerContainer {
     position:relative;     
 }
@@ -85,4 +89,12 @@ hr
 {
 width: 96%;
 height: 1px;
+
+.row {
+	margin-top: 30px;
+}
+
+#postsum {
+	margin-left: 45px;
+
 }
