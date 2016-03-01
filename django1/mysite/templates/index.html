@@ -4,7 +4,20 @@
 {% block content %}
 
     
-
+<!--     <div id="banner">
+        <img style="object-fit: scale-down;" src="{% static 'assets/placeholderold.jpg' %}">
+    </div> -->
+    <div class="row">
+        <div class="col-md-4">
+            <img style="max-height: 100%; max-width: 100%; thumb" src="{% static 'assets/emmausbb.png' %}">
+        </div>
+        <div class="col-md-4">
+            <img style="max-height: 100%; max-width: 100%" src="{% static 'assets/emmausmt.png' %}">
+        </div>
+        <div class="col-md-4">
+            <img style="max-height: 100%; max-width: 100%" src="{% static 'assets/emmaussm.png' %}">
+        </div>
+    </div>
     <div class="row">
         <div class="col-md-12">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac sodales nisi. Praesent sit amet sem non elit dapibus malesuada. Vestibulum magna tellus, tempor sit amet justo at, congue mattis arcu. Mauris auctor augue luctus enim varius imperdiet. Etiam id rhoncus ipsum, quis luctus nulla. Donec pellentesque velit justo. Cras ac purus lobortis, vehicula lorem id, suscipit eros. Aliquam erat volutpat. Maecenas vitae nisi ut ante sodales euismod. Phasellus ultricies turpis nec ligula dictum, vel vestibulum arcu malesuada. Proin lacinia rutrum ante. Vestibulum purus diam, iaculis non porttitor non, cursus sit amet neque. Mauris sit amet erat sit amet lectus tristique ornare tincidunt id est. Integer finibus velit tellus, sed blandit lacus vehicula vitae.
@@ -14,6 +27,7 @@
     <hr>
     <br>
 
+    <div class="row">
         <div class="col-md-4" style="text-align: center; vertical-align: middle;">
             <h3 style="margin-top: 0">Current Events</h3>
             {% if posts %}
@@ -33,5 +47,6 @@
             <div id="map"></div>
             <br>
         </div>
+    </div>
 
 {% endblock %}
