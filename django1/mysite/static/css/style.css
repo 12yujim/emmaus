@@ -98,6 +98,7 @@ hr
 {
 width: 96%;
 height: 1px;
+}
 
 .row {
 	margin-top: 30px;
@@ -106,4 +107,51 @@ height: 1px;
 #postsum {
 	margin-left: 45px;
 
+}
+
+#dr {
+	text-align: center;
+}
+
+#dr > ul > li {
+	display: inline-block; 
+    zoom: 1;
+    *display: inline;
+}
+
+.drButton {
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Verdana;
+	font-size:27px;
+	font-weight:bold;
+	padding:2px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #404040;
+	border:none;
+	background:none;
+}
+
+.drButton:hover {
+	padding:0;
+	border:2px solid transparent;
+	border-bottom:2px solid #1e2f45;
+}
+
+.drButton:focus {
+	outline:none;
+}
+
+.current {
+	padding:0;
+	border:2px solid transparent;
+	border-bottom:2px solid #1e2f45;
+}
+
+@media (min-width: 768px) {
+  .modal-xl {
+    width: 90%;
+   max-width:1200px;
+  }
 }
