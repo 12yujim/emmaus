@@ -5,7 +5,8 @@
     	<link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.css' %}"/>
     	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
         <title>{% block head_title %}Emmaus Road | Korean Church at Cornell English Ministry{% endblock %}</title>
-        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfKEGuJcyMBV0Lyqm8YDQdazbivd98Gbo"></script>
+        <script src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
         <script>
 	      function initialize() {
 	        var mapCanvas = document.getElementById('map');
@@ -98,7 +99,9 @@
 				            <li><a href="/beliefs/#">Doctrine</a></li>
 				          </ul>
 				        </li>
+				        <li class="{% if nbar == 'fellowship' %}active{% endif %}"><a href="/fellowship">Fellowship</a></li>
 				        <li class="{% if nbar == 'events' %}active{% endif %}"><a href="/events">Events</a></li>
+				        <li class="{% if nbar == 'mission' %}active{% endif %}"><a href="/mission">Missions</a></li>
 				        <li class="{% if nbar == 'sermon' %}active{% endif %}"><a href="/sermon">Sermons</a></li>
 				        <li class="{% if nbar == 'contact' %}active{% endif %}"><a href="/contact">Contact</a></li>
 				      </ul>
