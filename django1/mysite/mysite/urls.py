@@ -27,6 +27,8 @@ urlpatterns = [
 	url(r'^sermon/', 'blog.views.sermon'),
 	url(r'^contact/', 'blog.views.contact'),
 	url(r'^events/', 'blog.views.events'),
+	url(r'^mission/', 'blog.views.mission'),
+	url(r'^fellowship/', 'blog.views.fellowship'),
 	url(
 	    r'^blog/view/(?P<slug>[^\.]+).html', 
 	    'blog.views.view_post', 

@@ -38,6 +38,12 @@ def events(request):
         'posts': Blog.objects.all()
     })
 
+def mission(request):
+    return render_to_response('mission.html', {'nbar': 'mission'})
+
+def fellowship(request):
+    return render_to_response('fellowship.html', {'nbar': 'fellowship'})
+
 def contact(request):
     errors = []
     if request.method == 'POST':
