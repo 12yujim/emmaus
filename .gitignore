@@ -1,0 +1,15 @@
+# Compiled #
+############
+*.pyc
+
+# Static Assets #
+#################
+static/assets/*
+media/profile/placeholder.jpg
+
+# Logs / Databases #
+####################
+*.log
+*.sql
+*.sqlite
+*.sqlite3
