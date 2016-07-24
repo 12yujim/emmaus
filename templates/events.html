@@ -9,7 +9,7 @@
 		<div id="allposts">
 		{% for post in posts %}
 			<div id="entry">
-				<img src="{% static 'assets/calendar.png' %}" height=35 width=35 style="margin-right:10px"><a href="{{ post.get_absolute_url }}" style="font-size:20px">{{ post.title }}</a><br>
+				<img src="{% static 'emmaus/assets/calendar.png' %}" height=35 width=35 style="margin-right:10px"><a href="{{ post.get_absolute_url }}" style="font-size:20px">{{ post.title }}</a><br>
 				{% if post.summary %}
 					<div id="postsum">
 						{{ post.summary }}
