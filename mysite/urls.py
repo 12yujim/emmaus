@@ -17,21 +17,21 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
-
+import blog.views
 
 urlpatterns = [
-	url(r'^$', 'blog.views.index'),
-	url(r'^about/', 'blog.views.about'),
-	url(r'^ministries/', 'blog.views.ministries'),
-	url(r'^beliefs/', 'blog.views.beliefs'),
-	url(r'^sermon/', 'blog.views.sermon'),
-	url(r'^contact/', 'blog.views.contact'),
-	url(r'^events/', 'blog.views.events'),
-	url(r'^mission/', 'blog.views.mission'),
-	url(r'^fellowship/', 'blog.views.fellowship'),
+	url(r'^$', blog.views.index),
+	url(r'^about/', blog.views.about),
+	url(r'^ministries/', blog.views.ministries),
+	url(r'^beliefs/', blog.views.beliefs),
+	url(r'^sermon/', blog.views.sermon),
+	url(r'^contact/', blog.views.contact),
+	url(r'^events/', blog.views.events),
+	url(r'^mission/', blog.views.mission),
+	url(r'^fellowship/', blog.views.fellowship),
 	url(
 	    r'^blog/view/(?P<slug>[^\.]+).html', 
-	    'blog.views.view_post', 
+	    blog.views.view_post, 
 	    name='view_blog_post'),
     url(r'^admin/', include(admin.site.urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
